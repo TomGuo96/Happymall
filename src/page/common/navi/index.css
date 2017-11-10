@@ -1,0 +1,23 @@
+.navi {
+  background: #eee;
+  height: 30px;
+  line-height: 30px;
+}
+/* 用户部分 */
+.navi .user {
+  float: left;
+}
+.navi .user.login {
+  display: none;
+} 
+.navi .user .link {
+  margin-right: 5px;
+}
+/* 导航链接部分 */
+.navi .navi-list {
+  float: right;
+}
+.navi .navi-list .navi-item {
+  display: inline-block;
+  margin-left: 5px;
+}
