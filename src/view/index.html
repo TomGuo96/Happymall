@@ -2,11 +2,15 @@
 <html lang="en">
   <head>
     <%= require('html-loader!./layout/head-common.html') %>
-    <title>heppymall电商平台</title>
-  </head>
+    <title><%= htmlWebpackPlugin.options.title %> - Happymall电商平台</title>
+</head>
 <body>
   <%= require('html-loader!./layout/navi.html') %>
   <%= require('html-loader!./layout/header.html') %>
+  <div class="page-wrap w-fixed">
+    <%= require('html-loader!./layout/navi-side.html') %>
+    <div class="content with-navi">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum assumenda quisquam nequ</div>
+  </div>
   <%= require('html-loader!./layout/footer.html') %>
 </body>
 </html>
