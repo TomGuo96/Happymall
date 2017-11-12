@@ -21,7 +21,7 @@ var nav = {
     });
     // 注册点击事件
     $('.js-login').click(function() {
-      window.location.href = './regeister.html';
+      window.location.href = './user-regeister.html';
     });
     // 退出点击事件
     $('.js-logout').click(function() {

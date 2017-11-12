@@ -50,7 +50,7 @@ var _util = {
   },
   // 统一登陆处理
   doLogin: function() {
-    window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href);
+    window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href);
   },
   goHome: function() {
     window.location.href = './index.html';
@@ -72,7 +72,7 @@ var _util = {
     }
     // 手机号验证
     if ('phone' === type) {
-      return /^1d{10}$/.test(value);
+      return /^1\d{10}$/.test(value);
     }
     // 邮箱格式验证
     if ('email' === type) {

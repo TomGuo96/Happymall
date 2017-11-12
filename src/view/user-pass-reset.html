@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= require('html-loader!./layout/head-common.html') %>
+    <title><%= htmlWebpackPlugin.options.title %> - Happymall电商平台</title>
+</head>
+<body>
+  <%= require('html-loader!./layout/navi-simple.html') %>
+  <div class="page-wrap w-fixed">
+    <div class="w-fixed">
+      <div class="user-con">
+        <div class="user-title">找回密码</div>
+        <div class="user-box">
+          <div class="error-item">
+            <i class="fa fa-minus-circle error-icon"></i>
+            <p class="error-msg">Error</p>
+          </div>
+          <div class="step-con step-username">
+            <p class="user-item-text">请输入用户名</p>
+            <div class="user-item">
+              <label for="username" class="user-label"><i class="fa fa-user"></i></label>
+              <input type="text" class="user-content" id="username" placeholder="请输入用户名" autocomplete="off">
+            </div>
+            <a class="btn btn-submit" id="submit-username">下一步</a>
+          </div>
+          <div class="step-con step-question">
+            <p class="user-item-text question">密码提示问题答案是</p>
+            <div class="user-item">
+              <label for="answer" class="user-label"><i class="fa fa-key"></i></label>
+              <input type="text" class="user-content" id="answer" placeholder="密码提示问题答案" autocomplete="off">
+            </div>
+            <a class="btn btn-submit" id="submit-answer">下一步</a>
+          </div>
+          <div class="step-con pass-step-password">
+            <p class="user-item-text">请输入新密码</p>
+            <div class="user-item">
+              <label for="password" class="user-label"><i class="fa fa-lock"></i></label>
+              <input type="password" class="user-content" id="password" placeholder="请输入新密码" autocomplete="off">
+            </div>
+            <a class="btn btn-submit" id="submit-password">下一步</a>
+          </div>
+          <div class="link-item">
+            <a href="./user-login.html" target="_blank" class="link">返回登录>></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%= require('html-loader!./layout/footer.html') %>
+</body>
+</html>
