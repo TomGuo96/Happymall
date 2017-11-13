@@ -2,8 +2,6 @@
 
 require('./index.css');
 
-require('page/common/navi-simple/index.js');
-
 var naviSide = require('page/common/navi-side/index.js');
 var _util = require('util/util.js');
 var _user = require('service/user-service.js');

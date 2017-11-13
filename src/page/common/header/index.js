@@ -7,6 +7,7 @@ var _util = require('util/util.js');
 var header = {
   init: function() {
     this.bindEvent();
+    this.onLoad();
   },
   onLoad: function() {
     var keyword = _util.getUrlParam('keyword');
@@ -34,7 +35,7 @@ var header = {
     var keyword = $.trim($('#search-input').val());
     // 如果有搜索单词，正常跳转，否则跳回主页
     if (keyword) {
-      window.location.href = './list.html?keyword' + keyword;
+      window.location.href = './list.html?keyword=' + keyword;
     } else {
       _util.goHome();
     }

@@ -15,8 +15,8 @@ var _util = {
       data: param.data || '',
       success: function(res) {
         // 请求成功
-        if (0 === status) {
-          typeof param.success === 'function' && param.success(res.data, res.msg)
+        if (0 === res.status) {
+           typeof param.success === 'function' && param.success(res.data, res.msg)
         }
         // 没有登陆状态，需要强制登陆 
         else if (res.status === 10) {

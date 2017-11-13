@@ -2,7 +2,6 @@
 
 require('./index.css');
 
-require('page/common/navi-simple/index.js');
 var _util = require('util/util.js');
 
 $(function() {
