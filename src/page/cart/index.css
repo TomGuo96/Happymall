@@ -1,0 +1,118 @@
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ebebeb;
+  margin-bottom: 10px;
+}
+/* header */
+.cart-header {
+  background: #eee;
+}
+.cart-header .cart-cell {
+  height: 40px;
+  line-height: 40px;
+}
+.cart-table .cell-check {
+  width: 6%;
+  text-align: left;
+  padding-left: 20px;
+}
+.cart-table .cell-img {
+  text-align: center;
+  width: 10%;
+}
+.cart-table .cell-img .p-img {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #ddd;
+  margin: 10px 0;
+}
+.cart-table .cell-info {
+  text-align: left;
+  width: 35%;
+}
+.cart-header .cell-info {
+  padding-left: 106px;
+  width: 45%;
+}
+.cart-table .cell-price {
+  text-align: center;
+  width: 10%;
+}
+.cart-table .cell-count {
+  text-align: center;
+  width: 15%;
+}
+.cart-table .cell-count .count-input {
+  width: 60px;
+  height: 28px;
+  line-height: 28px;
+  border: 1px solid #ddd;
+  text-align: center;
+  vertical-align: middle;
+  outline: none;
+  color: #333;
+}
+.cart-table .cell-count .count-btn {
+  display: inline-block;
+  width: 20px;
+  height: 28px;
+  line-height: 28px;
+  border: 1px solid #ddd;
+  vertical-align: middle;
+  cursor: pointer;
+  background: #fff;
+  cursor: pointer;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.cart-table .cell-total {
+  font-weight: bold;
+  text-align: center;
+  width: 14%;
+}
+.cart-table .cell-opera {
+  text-align: center;
+  width: 10%;
+}
+/* footer */
+.cart-footer {
+  overflow: hidden;
+  position: relative;
+  line-height: 50px;
+  background: #eee;
+}
+.cart-footer .select-con {
+  float: left;
+  padding-left: 20px;
+}
+.cart-footer .delete-con {
+  float: left;
+  margin-left: 20px;
+}
+.cart-footer .submit-con {
+  float: right;
+}
+.cart-footer .submit-con .submit-total {
+  font-size: 18px;
+  color: #c60023;
+  font-weight: bold;
+  margin-right: 30px;
+  vertical-align: middle;
+}
+.cart-footer .submit-con .btn-submit {
+  height: 50px;
+  line-height: 50px;
+  width: 80px;
+  text-align: center;
+}
+.err-tip {
+  font-size: 16px;
+  height: 60px;
+  line-height: 60px;
+  color: #f60;
+  text-align: center;
+  background: #eee;
+}

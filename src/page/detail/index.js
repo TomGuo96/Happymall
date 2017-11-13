@@ -37,8 +37,10 @@ var page = {
       var type = $(this).hasClass('plus') ? 'plus' : 'minus';
       var $pCount = $('.p-count');
       var curCount = parseInt($pCount.val());
-      var min = 1;
-      var max = _this.data.detailInfo.stock || 1;
+      var min = 0;
+      var max = _this.data.detailInfo.stock || 0;
+      if (_this.data.detailInfo.stock === 0)
+        return;
       if (type === 'plus') {
         $pCount.val(curCount < max ? curCount + 1 : max);
       } else if (type === 'minus') {
@@ -47,9 +49,12 @@ var page = {
     });
     // 加入购物车
     $(document).on('click', '.cart-add', function() {
+      var $pCount = $('.p-count');
+      if (_this.data.detailInfo.stock === 0)
+        return;
       _cart.addToCart({
         productId: _this.data.productId,
-        count: $('.p-count').val()
+        count: parseInt($pCount.val())
       }, function(res) {
         window.location.href = './result.html?type=cart-add';
       }, function(errMsg) {

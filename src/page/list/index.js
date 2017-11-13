@@ -2,6 +2,7 @@
 
 require('./index.css');
 
+require('page/common/navi/index.js');
 require('page/common/header/index.js');
 
 var _util = require('util/util.js');

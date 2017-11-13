@@ -6,7 +6,7 @@
       </a>
     </div>
     <div class="p-price-con">
-      <span class="p-price">짜{{price}}</span>
+      <span class="p-price">¥{{price}}</span>
     </div>
     <div class="p-name-con">
       <a href="./detail.html?productId={{id}}" class="p-name" target="_blank">{{name}}</a>

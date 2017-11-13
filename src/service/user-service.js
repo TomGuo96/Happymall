@@ -64,7 +64,7 @@ var _user = {
   },
   checkAnswer: function(userInfo, resolve, reject) {
     _util.request({
-      url: _util.getServerUrl('/user/forget_check_answer'),
+      url: _util.getServerUrl('/user/forget_check_answer.do'),
       data: userInfo,
       method: 'POST',
       success: resolve,
@@ -74,7 +74,7 @@ var _user = {
   // 重置密码
   resetPassword: function(userInfo, resolve, reject) {
     _util.request({
-      url: _util.getServerUrl('/user/forget_check_answer'),
+      url: _util.getServerUrl('/user/forget_check_answer.do'),
       data: userInfo,
       method: 'POST',
       success: resolve,
@@ -83,7 +83,7 @@ var _user = {
   },
   getUserInfo: function(resolve, reject) {
     _util.request({
-      url: _util.getServerUrl('/user/get_infomation.do'),
+      url: _util.getServerUrl('/user/get_information.do'),
       method: 'POST',
       success: resolve,
       error: reject
@@ -92,7 +92,7 @@ var _user = {
   // 更新用户信息
   updateUserInfo: function(userInfo, resolve, reject) {
     _util.request({
-      url: _util.getServerUrl('/user/get_infomation.do'),
+      url: _util.getServerUrl('/user/update_information.do'),
       data: userInfo,
       method: 'POST',
       success: resolve,
