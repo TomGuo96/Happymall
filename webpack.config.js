@@ -9,6 +9,7 @@ var getHtmlConfig = function(name, title) {
   return {
     template: './src/view/' + name + '.html',
     filename: 'view/' + name + '.html',
+    favicon: './favicon.ico',
     title: title,
     inject: true,
     hash: true,
@@ -34,11 +35,13 @@ var config = {
      'user-center-update': ['./src/page/user-center-update/index.js'],
      'user-pass-reset': ['./src/page/user-pass-reset/index.js'],
      'user-pass-update': ['./src/page/user-pass-update/index.js'],
+     'about': ['./src/page/about/index.js'],
      'result': ['./src/page/result/index.js']
    },
    output: {
        path: path.resolve(__dirname, 'dist'),
-       publicPath: '/dist/',
+       // publicPath: '/dist/',
+       publicPath: 'static.happymmall.com/',
        filename: 'js/[name].js'
    },
    devServer: {
@@ -62,7 +65,11 @@ var config = {
         test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=100&name=resource/[name].[ext]'
      },
      {
-        test: /\.string$/, loader: 'html-loader'
+        test: /\.string$/, loader: 'html-loader',
+        query: {
+          minimize: true,
+          removeAttributeQuotes: false
+        }
      }
      ]
    },
@@ -98,7 +105,8 @@ var config = {
      new HtmlWebpackPlugin(getHtmlConfig('user-center-update', '更改用户信息')),
      new HtmlWebpackPlugin(getHtmlConfig('user-pass-update', '更改用户密码')),
      new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '找回密码')),
-     new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果'))
+     new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果')),
+     new HtmlWebpackPlugin(getHtmlConfig('about', '关于'))
    ]
 };
 // postcss-loader
