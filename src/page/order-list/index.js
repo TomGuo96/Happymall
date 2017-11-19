@@ -15,7 +15,7 @@ var page = {
   data: {
     listParam: {
       pageNum: 1,
-      pageSize: 3
+      pageSize: 10
     }
   },
   

@@ -56,6 +56,8 @@ var page = {
     var orderDetailHtml = '';
     var $content = $('.content');
     
+    $content.html('<p class="loading"></p>');
+    
     _order.getOrderDetail(_this.data.orderNumber, function(res) {
       
       _this.dataFilter(res);
