@@ -18,13 +18,15 @@ var getHtmlConfig = function(name, title) {
 
 // webpack config
 var config = {
-   // entry: './src/page/index/index.js',
    entry: {
      'common': ['./src/page/common/index.js'],
      'index': ['./src/page/index/index.js'],
      'list': ['./src/page/list/index.js'],
      'detail': ['./src/page/detail/index.js'],
      'cart': ['./src/page/cart/index.js'],
+     'order-confirm': ['./src/page/order-confirm/index.js'],
+     'order-list': ['./src/page/order-list/index.js'],
+     'order-detail': ['./src/page/order-detail/index.js'],
      'user-login': ['./src/page/user-login/index.js'],
      'user-register': ['./src/page/user-register/index.js'],
      'user-center': ['./src/page/user-center/index.js'],
@@ -35,9 +37,14 @@ var config = {
    },
    output: {
        path: path.resolve(__dirname, 'dist'),
-       // publicPath: '/dist',
-       publicPath: path.resolve(__dirname, '/dist'),
+       publicPath: '/dist/',
        filename: 'js/[name].js'
+   },
+   devServer: {
+     port: 8080,
+     open: true,
+     stats: "minimal",
+     openPage: 'dist/view/index.html'
    },
    externals: {
      'jquery': 'window.jQuery'
@@ -80,6 +87,9 @@ var config = {
      new HtmlWebpackPlugin(getHtmlConfig('list', '商品列表页')),
      new HtmlWebpackPlugin(getHtmlConfig('detail', '商品详情页')),
      new HtmlWebpackPlugin(getHtmlConfig('cart', '购物车')),
+     new HtmlWebpackPlugin(getHtmlConfig('order-confirm', '确认订单')),
+     new HtmlWebpackPlugin(getHtmlConfig('order-list', '订单列表')),
+     new HtmlWebpackPlugin(getHtmlConfig('order-detail', '订单详情')),
      new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
      new HtmlWebpackPlugin(getHtmlConfig('user-register', '用户注册')),
      new HtmlWebpackPlugin(getHtmlConfig('user-center', '用户中心')),
@@ -89,5 +99,5 @@ var config = {
      new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果'))
    ]
 };
-
+// postcss-loader
 module.exports = config;

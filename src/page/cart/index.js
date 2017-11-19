@@ -116,7 +116,7 @@ var page = {
     $(document).on('click', '.btn-submit', function() {
       // 判断总价是否为零
       if (_this.data.cartInfo && _this.data.cartInfo.cartTotalPrice > 0) {
-        window.location.href = './confirm.html';
+        window.location.href = './order-confirm.html';
       } else {
         _util.errorTips('请选择商品后提交');
       }
