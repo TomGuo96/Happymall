@@ -40,15 +40,20 @@ var config = {
    },
    output: {
        path: path.resolve(__dirname, 'dist'),
-       // publicPath: '/dist/',
-       publicPath: 'static.happymmall.com/',
+       publicPath: '/dist/', // dev
+       // publicPath: 'static.happymmall.com/', // build
        filename: 'js/[name].js'
    },
    devServer: {
      port: 8080,
      open: true,
      stats: "minimal",
-     openPage: 'dist/view/index.html'
+     openPage: 'dist/view/index.html',
+     proxy: [{
+       context: ['/user', '/order', '/product', '/cart'],
+       target: 'http://www.happymmall.com',
+       changeOrigin: true
+     }]
    },
    externals: {
      'jquery': 'window.jQuery'
